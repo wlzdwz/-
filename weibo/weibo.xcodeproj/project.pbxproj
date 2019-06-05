@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E939EEC122A778A90086B052 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939EEC022A778A90086B052 /* VisitorView.swift */; };
 		E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBBD02293A0A300AFF698 /* AppDelegate.swift */; };
-		E94CBBD32293A0A300AFF698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBBD22293A0A300AFF698 /* ViewController.swift */; };
 		E94CBBD82293A0A500AFF698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94CBBD72293A0A500AFF698 /* Assets.xcassets */; };
 		E94CBBDB2293A0A500AFF698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94CBBD92293A0A500AFF698 /* LaunchScreen.storyboard */; };
 		E94CBBE62293A0A600AFF698 /* weiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBBE52293A0A600AFF698 /* weiboTests.swift */; };
@@ -21,6 +21,7 @@
 		E94CBC102293AD2B00AFF698 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC0F2293AD2B00AFF698 /* ProfileTableViewController.swift */; };
 		E94ED9BD2297D00E00BD5A9E /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = E94ED9BB2297D00E00BD5A9E /* MainVCSettings.json */; };
 		E94ED9BE2297D00E00BD5A9E /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94ED9BC2297D00E00BD5A9E /* NullViewController.swift */; };
+		E94ED9C02297EF8600BD5A9E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94ED9BF2297EF8600BD5A9E /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E939EEC022A778A90086B052 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		E94CBBCD2293A0A300AFF698 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94CBBD02293A0A300AFF698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E94CBBD22293A0A300AFF698 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E94CBBD72293A0A500AFF698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94CBBDA2293A0A500AFF698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E94CBBDC2293A0A500AFF698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		E94CBC0F2293AD2B00AFF698 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E94ED9BB2297D00E00BD5A9E /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		E94ED9BC2297D00E00BD5A9E /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		E94ED9BF2297EF8600BD5A9E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E939EEC222A79C570086B052 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tools;
+			path = weibo/Classes/Tools;
+			sourceTree = SOURCE_ROOT;
+		};
 		E94CBBC42293A0A300AFF698 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +123,6 @@
 			children = (
 				E94CBBD02293A0A300AFF698 /* AppDelegate.swift */,
 				E94CBBFE2293AB7700AFF698 /* Classes */,
-				E94CBBD22293A0A300AFF698 /* ViewController.swift */,
 				E94CBBD72293A0A500AFF698 /* Assets.xcassets */,
 				E94CBBD92293A0A500AFF698 /* LaunchScreen.storyboard */,
 				E94CBBDC2293A0A500AFF698 /* Info.plist */,
@@ -148,6 +157,7 @@
 				E94CBC022293AB7700AFF698 /* Common */,
 				E94CBC032293AB7700AFF698 /* Profile */,
 				E94CBC042293AB7700AFF698 /* Main */,
+				E939EEC222A79C570086B052 /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +207,8 @@
 			children = (
 				E94ED9BA2297D00E00BD5A9E /* Resource */,
 				E94CBC052293AB9700AFF698 /* MainViewController.swift */,
+				E94ED9BF2297EF8600BD5A9E /* BaseTableViewController.swift */,
+				E939EEC022A778A90086B052 /* VisitorView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -343,11 +355,12 @@
 			files = (
 				E94CBC082293AC8F00AFF698 /* HomeTableViewController.swift in Sources */,
 				E94CBC062293AB9700AFF698 /* MainViewController.swift in Sources */,
-				E94CBBD32293A0A300AFF698 /* ViewController.swift in Sources */,
+				E94ED9C02297EF8600BD5A9E /* BaseTableViewController.swift in Sources */,
 				E94CBC0A2293ACDA00AFF698 /* DiscoverTableViewController.swift in Sources */,
 				E94ED9BE2297D00E00BD5A9E /* NullViewController.swift in Sources */,
 				E94CBC0C2293AD1200AFF698 /* MessageTableViewController.swift in Sources */,
 				E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */,
+				E939EEC122A778A90086B052 /* VisitorView.swift in Sources */,
 				E94CBC102293AD2B00AFF698 /* ProfileTableViewController.swift in Sources */,
 				E94CBC0E2293AD1C00AFF698 /* CommonTableViewController.swift in Sources */,
 			);

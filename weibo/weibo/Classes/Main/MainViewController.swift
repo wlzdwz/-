@@ -33,6 +33,15 @@ class MainViewController: UITabBarController {
         tabBar.addSubview(composeBtn);
     }
     
+    /*
+     *  监听加号按钮的点击
+     注意:监听按钮的点击的方法不能是私有方法
+     按钮点击事件的调用是由 运行循环 监听并且以消息机制传递的,因此,按钮监听函数不能设置为private
+     */
+    @objc func composeClick(){
+        print(#function);
+    }
+    
     //添加子控制器
     private func addChildControllers(){
         //初始化子控制器
@@ -71,6 +80,8 @@ class MainViewController: UITabBarController {
         btn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: UIControl.State.highlighted);
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: UIControl.State.normal);
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: UIControl.State.highlighted);
+        //添加事件
+        btn.addTarget(self, action: #selector(composeClick), for: UIControl.Event.touchUpInside);
         
         return btn;
     }()
