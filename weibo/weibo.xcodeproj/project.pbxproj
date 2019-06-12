@@ -18,11 +18,14 @@
 		E94CBC082293AC8F00AFF698 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC072293AC8F00AFF698 /* HomeTableViewController.swift */; };
 		E94CBC0A2293ACDA00AFF698 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC092293ACDA00AFF698 /* DiscoverTableViewController.swift */; };
 		E94CBC0C2293AD1200AFF698 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC0B2293AD1200AFF698 /* MessageTableViewController.swift */; };
-		E94CBC0E2293AD1C00AFF698 /* CommonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC0D2293AD1C00AFF698 /* CommonTableViewController.swift */; };
 		E94CBC102293AD2B00AFF698 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBC0F2293AD2B00AFF698 /* ProfileTableViewController.swift */; };
 		E94ED9BD2297D00E00BD5A9E /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = E94ED9BB2297D00E00BD5A9E /* MainVCSettings.json */; };
 		E94ED9BE2297D00E00BD5A9E /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94ED9BC2297D00E00BD5A9E /* NullViewController.swift */; };
 		E94ED9C02297EF8600BD5A9E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94ED9BF2297EF8600BD5A9E /* BaseTableViewController.swift */; };
+		E9BE8AF622AA565500E8983D /* UIBarButtonItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE8AF522AA565500E8983D /* UIBarButtonItem+category.swift */; };
+		E9BE8AF822AA5D9700E8983D /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BE8AF722AA5D9700E8983D /* TitleButton.swift */; };
+		E9F1A60D22AFCFB3001E19E8 /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9F1A60C22AFCFB3001E19E8 /* PopoverViewController.storyboard */; };
+		E9F1A60F22AFDC6A001E19E8 /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F1A60E22AFDC6A001E19E8 /* PopoverPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +66,14 @@
 		E94CBC072293AC8F00AFF698 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		E94CBC092293ACDA00AFF698 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		E94CBC0B2293AD1200AFF698 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
-		E94CBC0D2293AD1C00AFF698 /* CommonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewController.swift; sourceTree = "<group>"; };
 		E94CBC0F2293AD2B00AFF698 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E94ED9BB2297D00E00BD5A9E /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		E94ED9BC2297D00E00BD5A9E /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		E94ED9BF2297EF8600BD5A9E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		E9BE8AF522AA565500E8983D /* UIBarButtonItem+category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+category.swift"; sourceTree = "<group>"; };
+		E9BE8AF722AA5D9700E8983D /* TitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
+		E9F1A60C22AFCFB3001E19E8 /* PopoverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
+		E9F1A60E22AFDC6A001E19E8 /* PopoverPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +183,10 @@
 		E94CBBFE2293AB7700AFF698 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E94CBC022293AB7700AFF698 /* Common */,
 				E94CBBFF2293AB7700AFF698 /* Home */,
 				E94CBC002293AB7700AFF698 /* Discover */,
 				E94CBC012293AB7700AFF698 /* Message */,
-				E94CBC022293AB7700AFF698 /* Common */,
 				E94CBC032293AB7700AFF698 /* Profile */,
 				E94CBC042293AB7700AFF698 /* Main */,
 				E939EEC222A79C570086B052 /* Tools */,
@@ -191,6 +197,7 @@
 		E94CBBFF2293AB7700AFF698 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9F1A60B22AFCF8D001E19E8 /* Popover */,
 				E94CBC072293AC8F00AFF698 /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -215,7 +222,8 @@
 		E94CBC022293AB7700AFF698 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E94CBC0D2293AD1C00AFF698 /* CommonTableViewController.swift */,
+				E9BE8AF522AA565500E8983D /* UIBarButtonItem+category.swift */,
+				E9BE8AF722AA5D9700E8983D /* TitleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -246,6 +254,15 @@
 				E94ED9BC2297D00E00BD5A9E /* NullViewController.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		E9F1A60B22AFCF8D001E19E8 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				E9F1A60C22AFCFB3001E19E8 /* PopoverViewController.storyboard */,
+				E9F1A60E22AFDC6A001E19E8 /* PopoverPresentationController.swift */,
+			);
+			path = Popover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +372,7 @@
 			files = (
 				E94CBBDB2293A0A500AFF698 /* LaunchScreen.storyboard in Resources */,
 				E94CBBD82293A0A500AFF698 /* Assets.xcassets in Resources */,
+				E9F1A60D22AFCFB3001E19E8 /* PopoverViewController.storyboard in Resources */,
 				E94ED9BD2297D00E00BD5A9E /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,12 +423,14 @@
 				E94CBC062293AB9700AFF698 /* MainViewController.swift in Sources */,
 				E94ED9C02297EF8600BD5A9E /* BaseTableViewController.swift in Sources */,
 				E94CBC0A2293ACDA00AFF698 /* DiscoverTableViewController.swift in Sources */,
+				E9BE8AF822AA5D9700E8983D /* TitleButton.swift in Sources */,
+				E9F1A60F22AFDC6A001E19E8 /* PopoverPresentationController.swift in Sources */,
 				E94ED9BE2297D00E00BD5A9E /* NullViewController.swift in Sources */,
 				E94CBC0C2293AD1200AFF698 /* MessageTableViewController.swift in Sources */,
 				E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */,
 				E939EEC122A778A90086B052 /* VisitorView.swift in Sources */,
+				E9BE8AF622AA565500E8983D /* UIBarButtonItem+category.swift in Sources */,
 				E94CBC102293AD2B00AFF698 /* ProfileTableViewController.swift in Sources */,
-				E94CBC0E2293AD1C00AFF698 /* CommonTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

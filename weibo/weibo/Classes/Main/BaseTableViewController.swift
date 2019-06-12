@@ -8,13 +8,14 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController , VisitorViewDelegate{
     
     //定义一个变量保存用户是否登录
-    var isLogin = true;
+    var userLogin = false;
+    var visitorView:VisitorView?;
     
     override func loadView() {
-        isLogin ? setupVisitorView() : super.loadView();
+        !userLogin ? setupVisitorView() : super.loadView();
     }
     
     //MARK:- 内部创建方法
@@ -22,8 +23,25 @@ class BaseTableViewController: UITableViewController {
      创建未登录界面
      */
     private func setupVisitorView() -> Void {
+        //1.创建基本界面
         let customView = VisitorView();
+        customView.delegate = self;
         view = customView;
+        visitorView = customView;
+        
+        //2.创建导航条按钮
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: UIBarButtonItem.Style.plain, target: self, action: #selector(loginBtnWillClick));
+         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: UIBarButtonItem.Style.plain, target: self, action: #selector(registerBtnWillClick));
     }
+    
+    //MARK:- VisitorViewDelegate
+    @objc func registerBtnWillClick() {
+        print(#function);
+    }
+    
+    @objc func loginBtnWillClick() {
+        print(#function);
+    }
+    
     
 }

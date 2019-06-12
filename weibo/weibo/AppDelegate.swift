@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //1.设置导航条和工具条的外观
+        //2.外观一旦设置,全局有效.所以应该在程序一进入就设置
+        UINavigationBar.appearance().tintColor = UIColor.orange;
+        UITabBar.appearance().tintColor = UIColor.orange;
+        
         //1.创建window
         window = UIWindow(frame: UIScreen.main.bounds);
         window?.backgroundColor = UIColor.white;

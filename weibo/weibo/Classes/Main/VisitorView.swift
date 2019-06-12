@@ -9,7 +9,16 @@
 import UIKit
 import SnapKit
 
+//swift中的协议方法
+protocol VisitorViewDelegate:NSObjectProtocol{
+    func registerBtnWillClick();
+    func loginBtnWillClick();
+}
+
 class VisitorView: UIView {
+    
+    //定义代理,一定要用weak
+    weak var delegate : VisitorViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame:frame);
@@ -64,6 +73,49 @@ class VisitorView: UIView {
         fatalError("init(coder:) has not been implemented")
         
     }
+    /**
+     设置未登录界面
+     
+     @param isHome  是否是首页
+     @param imageName  图片名称
+     @param message  信息内容
+     */
+    func setupVisitorInfo(isHome:Bool, imageName:String, message:String){
+        //不是首页就隐藏转盘
+        iconView.isHidden = !isHome;
+        //修改中间图标
+        homeIcon.image = UIImage(named: imageName);
+        //修改文本内容
+        messageLabel.text = message;
+        
+        //如果是首页,执行动画
+        if isHome {
+            startAnimation();
+        }
+    }
+    
+    //注册事件
+    @objc func registerBtnWillClick(){
+        delegate?.registerBtnWillClick();
+    }
+    //登录事件
+    @objc func loginBtnWillClick() {
+        delegate?.loginBtnWillClick();
+    }
+    
+    //MARK:- 执行动画
+    private func startAnimation(){
+        //1.创建动画
+        let anim = CABasicAnimation(keyPath: "transform.rotation");
+        //2.设置动画属性
+        anim.toValue = 2 * Double.pi;
+        anim.duration = 20;
+        anim.repeatCount = MAXFLOAT;
+        //该属性表示动画执行完毕就移除,默认是YES
+        anim.isRemovedOnCompletion = false;
+        //3.添加动画到图层
+        iconView.layer.add(anim, forKey: nil);
+    }
     
     //MARK:- 懒加载
     //转盘
@@ -81,7 +133,7 @@ class VisitorView: UIView {
         let label = UILabel();
         label.numberOfLines = 0;
         label.textColor = UIColor.darkGray;
-        label.text = "夫人心起善念,善虽未为,而福神已随之;是以吉人语善,视善,行善,一日三善,三年天必降之福;凶人语恶,视恶,行恶,一日三恶,三年天必将之祸.";
+//        label.text = "夫人心起善念,善虽未为,而福神已随之;是以吉人语善,视善,行善,一日三善,三年天必降之福;凶人语恶,视恶,行恶,一日三恶,三年天必将之祸.";
         return label;
     }();
     //登录
@@ -90,6 +142,7 @@ class VisitorView: UIView {
         btn.setTitle("登录", for: UIControl.State.normal);
         btn.setTitleColor(UIColor.darkGray, for: UIControl.State.normal);
         btn.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: UIControl.State.normal);
+        btn.addTarget(self, action: #selector(loginBtnWillClick), for: UIControl.Event.touchUpInside);
         return btn;
     }();
     //注册
@@ -98,6 +151,7 @@ class VisitorView: UIView {
         btn.setTitleColor(UIColor.darkGray, for: UIControl.State.normal);
         btn.setTitle("注册", for: UIControl.State.normal);
         btn.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: UIControl.State.normal);
+        btn.addTarget(self, action: #selector(registerBtnWillClick), for: UIControl.Event.touchUpInside);
         return btn;
     }();
     //遮罩图片
