@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A38AC3F645C2D424A8B0738A /* libPods-weibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3AE0978D29E3E03A251C3A /* libPods-weibo.a */; };
+		E92DD68B22B2268A00B9B649 /* PopverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DD68A22B2268A00B9B649 /* PopverAnimator.swift */; };
 		E939EEC122A778A90086B052 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939EEC022A778A90086B052 /* VisitorView.swift */; };
 		E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBBD02293A0A300AFF698 /* AppDelegate.swift */; };
 		E94CBBD82293A0A500AFF698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94CBBD72293A0A500AFF698 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		3EDFF794C8551B15F815E2B0 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 		7D3AE0978D29E3E03A251C3A /* libPods-weibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AD9811361071BA717B35F3 /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
+		E92DD68A22B2268A00B9B649 /* PopverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopverAnimator.swift; sourceTree = "<group>"; };
 		E939EEC022A778A90086B052 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		E939EEC922A7B23F0086B052 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E94CBBCD2293A0A300AFF698 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +263,7 @@
 			children = (
 				E9F1A60C22AFCFB3001E19E8 /* PopoverViewController.storyboard */,
 				E9F1A60E22AFDC6A001E19E8 /* PopoverPresentationController.swift */,
+				E92DD68A22B2268A00B9B649 /* PopverAnimator.swift */,
 			);
 			path = Popover;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				E939EEC122A778A90086B052 /* VisitorView.swift in Sources */,
 				E9BE8AF622AA565500E8983D /* UIBarButtonItem+category.swift in Sources */,
 				E94CBC102293AD2B00AFF698 /* ProfileTableViewController.swift in Sources */,
+				E92DD68B22B2268A00B9B649 /* PopverAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

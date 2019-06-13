@@ -21,6 +21,16 @@ class HomeTableViewController: BaseTableViewController {
         //2.初始化导航条
         setupNav();
         
+        //添加通知观察者
+        NotificationCenter.default.addObserver(self, selector: #selector(menuViewWillChange), name: NSNotification.Name(PopverAnimatorWillShow), object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(menuViewWillChange), name: NSNotification.Name(PopverAnimatorWillDismiss), object: nil);
+        
+    }
+    
+    //MARK:- 通知响应方法,按钮箭头方向改变
+    @objc func menuViewWillChange(){
+        let titleBtn = navigationItem.titleView as! TitleButton;
+        titleBtn.isSelected = !titleBtn.isSelected;
     }
     
     //创建导航条按钮
@@ -39,8 +49,6 @@ class HomeTableViewController: BaseTableViewController {
     
     //MARK:- 按钮点击事件
     @objc func titleBtnClick(btn:TitleButton){
-        //1.箭头的方向改变
-        btn.isSelected = !btn.isSelected;
         
         //2.弹出菜单
         let sb = UIStoryboard(name: "PopoverViewController", bundle: nil);
@@ -48,7 +56,7 @@ class HomeTableViewController: BaseTableViewController {
         //2.1设置代理
         //默认情况下model会移除以前控制器的view,替换为当前弹出的View
         //如果自定义转场,那么就不会移除以前控制器的view
-        vc?.transitioningDelegate = self as? UIViewControllerTransitioningDelegate;
+        vc?.transitioningDelegate = popAnimator;
         //2.2设置转场的样式
         vc?.modalPresentationStyle = UIModalPresentationStyle.custom;
         
@@ -62,15 +70,12 @@ class HomeTableViewController: BaseTableViewController {
     @objc func rightItemClick(){
         print(#function);
     }
-
-}
-
-extension HomeTableViewController : UIViewControllerTransitioningDelegate{
     
-    //实现代理方法,告诉系统谁来负责转场动画
-    //UIPresentationController iOS8推出的专门用于负责转场动画的
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return PopoverPresentationController(presentedViewController: presented, presenting: presenting);
-    }
-    
+    //MARK:- 懒加载
+    //这里一定要设置一个属性,保存自定义转场对象,否则会报错
+    private lazy var popAnimator : PopverAnimator = {
+        let pop = PopverAnimator();
+        pop.presentFrame = CGRect(x: 100, y: 56, width: 200, height: 200);
+        return pop;
+    }();
 }

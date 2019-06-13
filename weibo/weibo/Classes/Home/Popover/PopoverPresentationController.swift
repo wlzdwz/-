@@ -10,6 +10,8 @@ import UIKit
 
 class PopoverPresentationController: UIPresentationController {
     
+    var presentFrame = CGRect.zero;
+    
     /**
      初始化方法,用于创建负责转场动画的对象
      
@@ -31,13 +33,18 @@ class PopoverPresentationController: UIPresentationController {
         //1.修改弹出视图的大小
 //        containerView; //容器视图
 //        presentedView; //被展现的视图
-        presentedView?.frame = CGRect(x: 100, y: 56, width: 200, height: 200);
+        if presentFrame == CGRect.zero{
+            presentedView?.frame = CGRect(x: 100, y: 56, width: 200, height: 200);
+        }else{
+            presentedView?.frame = presentFrame;
+        }
         
         //2.在容器视图上添加一个蒙版,插入到展现视图的下面
         containerView?.insertSubview(coverView, at: 0);
     }
     
     //MARK:- 懒加载
+    //弹出视图底部的遮罩图
     private lazy var coverView:UIView = {
         //1.创建view
         let vi = UIView();
@@ -48,7 +55,7 @@ class PopoverPresentationController: UIPresentationController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(close));
         vi.addGestureRecognizer(tap);
         return vi;
-    }()
+    }();
     
     //MARK:- 手势点击
     @objc func close(){
