@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A38AC3F645C2D424A8B0738A /* libPods-weibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3AE0978D29E3E03A251C3A /* libPods-weibo.a */; };
+		D1C4DC96AD1DA9EA0ACEC3E3 /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D18FBCB79AD3DD6148F28808 /* Pods_weibo.framework */; };
+		E90FC13322CB556B00577D70 /* Pods_weibo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D18FBCB79AD3DD6148F28808 /* Pods_weibo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E92DD68B22B2268A00B9B649 /* PopverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DD68A22B2268A00B9B649 /* PopverAnimator.swift */; };
 		E930047322B3304100DE4EC9 /* QRCodeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E930047222B3304100DE4EC9 /* QRCodeViewController.storyboard */; };
 		E930047522B330AB00DE4EC9 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930047422B330AB00DE4EC9 /* QRCodeViewController.swift */; };
+		E934791D22BB907600ECA49A /* QRCodeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934791C22BB907600ECA49A /* QRCodeCardViewController.swift */; };
 		E939EEC122A778A90086B052 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939EEC022A778A90086B052 /* VisitorView.swift */; };
 		E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBBD02293A0A300AFF698 /* AppDelegate.swift */; };
 		E94CBBD82293A0A500AFF698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94CBBD72293A0A500AFF698 /* Assets.xcassets */; };
@@ -48,15 +50,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E90FC13222CB554E00577D70 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				E90FC13322CB556B00577D70 /* Pods_weibo.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3EDFF794C8551B15F815E2B0 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
-		7D3AE0978D29E3E03A251C3A /* libPods-weibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-weibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18FBCB79AD3DD6148F28808 /* Pods_weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AD9811361071BA717B35F3 /* Pods-weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-weibo/Pods-weibo.release.xcconfig"; sourceTree = "<group>"; };
 		E92DD68A22B2268A00B9B649 /* PopverAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopverAnimator.swift; sourceTree = "<group>"; };
 		E930047222B3304100DE4EC9 /* QRCodeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRCodeViewController.storyboard; sourceTree = "<group>"; };
 		E930047422B330AB00DE4EC9 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		E934791C22BB907600ECA49A /* QRCodeCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCardViewController.swift; sourceTree = "<group>"; };
 		E939EEC022A778A90086B052 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
-		E939EEC922A7B23F0086B052 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E94CBBCD2293A0A300AFF698 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94CBBD02293A0A300AFF698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E94CBBD72293A0A500AFF698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38AC3F645C2D424A8B0738A /* libPods-weibo.a in Frameworks */,
+				D1C4DC96AD1DA9EA0ACEC3E3 /* Pods_weibo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +135,7 @@
 		C0DE27120FA1CA4428358C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7D3AE0978D29E3E03A251C3A /* libPods-weibo.a */,
+				D18FBCB79AD3DD6148F28808 /* Pods_weibo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 			children = (
 				E930047222B3304100DE4EC9 /* QRCodeViewController.storyboard */,
 				E930047422B330AB00DE4EC9 /* QRCodeViewController.swift */,
+				E934791C22BB907600ECA49A /* QRCodeCardViewController.swift */,
 			);
 			path = QRcode;
 			sourceTree = "<group>";
@@ -172,7 +188,6 @@
 				E94CBBD72293A0A500AFF698 /* Assets.xcassets */,
 				E94CBBD92293A0A500AFF698 /* LaunchScreen.storyboard */,
 				E94CBBDC2293A0A500AFF698 /* Info.plist */,
-				E939EEC922A7B23F0086B052 /* PrefixHeader.pch */,
 			);
 			path = weibo;
 			sourceTree = "<group>";
@@ -293,6 +308,8 @@
 				E94CBBC92293A0A300AFF698 /* Sources */,
 				E94CBBCA2293A0A300AFF698 /* Frameworks */,
 				E94CBBCB2293A0A300AFF698 /* Resources */,
+				59B800734E26FB8257B12532 /* [CP] Embed Pods Frameworks */,
+				E90FC13222CB554E00577D70 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -430,6 +447,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		59B800734E26FB8257B12532 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-weibo/Pods-weibo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weibo/Pods-weibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -443,6 +484,7 @@
 				E94CBC0A2293ACDA00AFF698 /* DiscoverTableViewController.swift in Sources */,
 				E9BE8AF822AA5D9700E8983D /* TitleButton.swift in Sources */,
 				E9F1A60F22AFDC6A001E19E8 /* PopoverPresentationController.swift in Sources */,
+				E934791D22BB907600ECA49A /* QRCodeCardViewController.swift in Sources */,
 				E94ED9BE2297D00E00BD5A9E /* NullViewController.swift in Sources */,
 				E94CBC0C2293AD1200AFF698 /* MessageTableViewController.swift in Sources */,
 				E94CBBD12293A0A300AFF698 /* AppDelegate.swift in Sources */,

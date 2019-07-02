@@ -59,7 +59,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="A3D-XB-rr9" firstAttribute="leading" secondItem="xeX-nI-Gnr" secondAttribute="leading" id="02L-It-dv2"/>
                                     <constraint firstAttribute="bottom" secondItem="A3D-XB-rr9" secondAttribute="bottom" id="2f7-05-Tk2"/>
@@ -73,14 +73,37 @@
                                     <constraint firstItem="f3P-XX-ey3" firstAttribute="top" secondItem="xeX-nI-Gnr" secondAttribute="top" id="urB-ep-dyR"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描得到的数据" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyq-mT-x4B">
+                                <rect key="frame" x="127" y="143" width="121.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOv-7u-g6D">
+                                <rect key="frame" x="150.5" y="513.5" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="0fd-wC-HAl"/>
+                                    <constraint firstAttribute="height" constant="30" id="G7b-om-d19"/>
+                                </constraints>
+                                <state key="normal" title="我的名片" backgroundImage="qrcode_button_background">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cardButtonClick:" destination="MbC-mq-8dJ" eventType="touchUpInside" id="nuh-Xo-qZV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="KOv-7u-g6D" firstAttribute="top" secondItem="xeX-nI-Gnr" secondAttribute="bottom" constant="30" id="1tS-S9-HY0"/>
                             <constraint firstItem="cyV-ja-C4C" firstAttribute="top" secondItem="Pzj-b0-hx8" secondAttribute="bottom" id="Fod-iA-IdF"/>
+                            <constraint firstItem="KOv-7u-g6D" firstAttribute="centerX" secondItem="Zyr-ce-H01" secondAttribute="centerX" id="HaC-fR-bgW"/>
                             <constraint firstItem="xeX-nI-Gnr" firstAttribute="centerY" secondItem="Zyr-ce-H01" secondAttribute="centerY" id="L4V-m1-huf"/>
+                            <constraint firstItem="Hyq-mT-x4B" firstAttribute="centerX" secondItem="Zyr-ce-H01" secondAttribute="centerX" id="Nwl-4v-7pV"/>
                             <constraint firstItem="xeX-nI-Gnr" firstAttribute="centerX" secondItem="Zyr-ce-H01" secondAttribute="centerX" id="Zgj-K7-Ahv"/>
                             <constraint firstAttribute="trailing" secondItem="Pzj-b0-hx8" secondAttribute="trailing" id="iBv-0y-bGa"/>
                             <constraint firstItem="Pzj-b0-hx8" firstAttribute="leading" secondItem="Zyr-ce-H01" secondAttribute="leading" id="po9-XT-5NC"/>
+                            <constraint firstItem="xeX-nI-Gnr" firstAttribute="top" secondItem="Hyq-mT-x4B" secondAttribute="bottom" constant="20" id="sw1-Yz-aL0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qwH-gh-IVj">
@@ -93,6 +116,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="customTabar" destination="Pzj-b0-hx8" id="UIY-KG-DZX"/>
+                        <outlet property="lb_scanResult" destination="Hyq-mT-x4B" id="KqC-rA-R7e"/>
                         <outlet property="scanLineTopCons" destination="urB-ep-dyR" id="Peo-go-imM"/>
                         <outlet property="scanLineViewHeight" destination="mIn-Gi-jZe" id="CDw-hr-0S2"/>
                         <outlet property="scanView" destination="xeX-nI-Gnr" id="aAQ-ed-Bv0"/>
@@ -100,11 +124,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ead-CN-UYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="342" y="-152"/>
+            <point key="canvasLocation" x="341.60000000000002" y="-152.47376311844079"/>
         </scene>
     </scenes>
     <resources>
         <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_button_background" width="34" height="32"/>
         <image name="qrcode_scanline_qrcode" width="218" height="170"/>
         <image name="qrcode_tabbar_icon_barcode" width="40" height="40"/>
         <image name="qrcode_tabbar_icon_qrcode" width="40" height="40"/>
